@@ -5,12 +5,5 @@ permalink: /posts/
 ---
 <div class="posts-page">
   <h1>All Posts</h1>
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li class="post-item">
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+  {% include post-list.html posts=site.posts %}
 </div>
