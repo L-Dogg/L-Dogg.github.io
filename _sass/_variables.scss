@@ -1,0 +1,47 @@
+// Fonts
+$font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+$font-body: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+$font-code: 'Fira Code', 'Consolas', 'Monaco', monospace;
+
+// Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+
+// Layout
+$container-width: 720px;
+$container-padding: 1.5rem;
+
+// Light theme (default)
+:root {
+  --color-bg: #fafaf7;
+  --color-bg-secondary: #f0efe9;
+  --color-text: #2c2c2c;
+  --color-text-secondary: #6b6b6b;
+  --color-text-muted: #999;
+  --color-accent: #8b4513;
+  --color-accent-hover: #a0522d;
+  --color-border: #e0dfd8;
+  --color-code-bg: #f5f4ef;
+  --color-tag-bg: #eae8e0;
+  --color-tag-text: #555;
+  --color-header-bg: #fafaf7;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+// Dark theme
+[data-theme="dark"] {
+  --color-bg: #1a1a1a;
+  --color-bg-secondary: #242424;
+  --color-text: #e0ddd5;
+  --color-text-secondary: #a0a0a0;
+  --color-text-muted: #666;
+  --color-accent: #d4a574;
+  --color-accent-hover: #e0b88a;
+  --color-border: #333;
+  --color-code-bg: #242424;
+  --color-tag-bg: #2a2a2a;
+  --color-tag-text: #aaa;
+  --color-header-bg: #1a1a1a;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.2);
+}

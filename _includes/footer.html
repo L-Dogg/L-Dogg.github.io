@@ -1,0 +1,13 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <p>&copy; 2020&ndash;{{ site.time | date: '%Y' }} {{ site.author.name }}</p>
+      <div class="footer-links">
+        <a href="https://github.com/{{ site.social.github }}" aria-label="GitHub">GitHub</a>
+        <a href="https://twitter.com/{{ site.social.twitter }}" aria-label="Twitter">Twitter</a>
+        <a href="https://www.linkedin.com/in/{{ site.social.linkedin }}" aria-label="LinkedIn">LinkedIn</a>
+        <a href="{{ '/feed.xml' | relative_url }}" aria-label="RSS">RSS</a>
+      </div>
+    </div>
+  </div>
+</footer>

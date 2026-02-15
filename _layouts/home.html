@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<div class="home">
+  <section class="hero">
+    <img src="{{ '/images/avatar-icon.png' | relative_url }}" alt="{{ site.author.name }}" class="avatar" width="120" height="120">
+    <h1>{{ site.author.name }}</h1>
+    <p class="bio">{{ site.author.bio }}</p>
+    <div class="hero-links">
+      <a href="https://github.com/{{ site.social.github }}">GitHub</a>
+      <a href="https://twitter.com/{{ site.social.twitter }}">Twitter</a>
+      <a href="https://www.linkedin.com/in/{{ site.social.linkedin }}">LinkedIn</a>
+      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+    </div>
+  </section>
+
+  <section class="recent-posts">
+    <h2>Recent Posts</h2>
+    <ul class="post-list">
+      {% for post in site.posts %}
+        <li class="post-item">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>

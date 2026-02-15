@@ -1,0 +1,156 @@
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+}
+
+// Header
+.site-header {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-header-bg);
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+.site-title {
+  font-family: $font-heading;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+
+  &:hover {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+}
+
+// Mobile nav toggle
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  cursor: pointer;
+  padding: 0.5rem;
+
+  span,
+  span::before,
+  span::after {
+    display: block;
+    background: var(--color-text);
+    height: 2px;
+    width: 1.25rem;
+    border-radius: 2px;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  span::before,
+  span::after {
+    content: '';
+    position: absolute;
+  }
+
+  span::before { top: -6px; }
+  span::after { top: 6px; }
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.5rem;
+
+  a {
+    font-family: $font-body;
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    transition: color 0.2s ease;
+
+    &:hover, &.active {
+      color: var(--color-accent);
+      text-decoration: none;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .nav-toggle-label {
+    display: block;
+    order: 2;
+  }
+
+  .site-nav {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-top: 1rem;
+    order: 3;
+  }
+
+  .theme-toggle {
+    order: 1;
+  }
+
+  .nav-toggle:checked ~ .site-nav {
+    display: flex;
+  }
+}
+
+// Main
+.site-main {
+  flex: 1;
+  padding: 3rem 0;
+}
+
+// Footer
+.site-footer {
+  padding: 2rem 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.25rem;
+
+  a {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}

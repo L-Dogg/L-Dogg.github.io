@@ -1,0 +1,43 @@
+title: "orgiele's basement"
+description: "Szymon's personal website"
+author:
+  name: "Szymon Adach"
+  bio: "Software engineer interested in distributed systems, reliability and observability."
+url: "https://orgiele.xyz"
+baseurl: ""
+
+permalink: /posts/:slug/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - docs/
+  - README.md
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "page"
+
+social:
+  github: "L-Dogg"
+  twitter: "orgiele"
+  linkedin: "orgiele"
