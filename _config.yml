@@ -19,6 +19,7 @@ sass:
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-redirect-from
 
 exclude:
   - Gemfile

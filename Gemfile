@@ -1,3 +1,8 @@
 source "https://rubygems.org"
 
-gem "github-pages", group: :jekyll_plugins
+gem "jekyll", "~> 4.3"
+gem "jekyll-seo-tag"
+gem "jekyll-redirect-from"
+gem "csv"
+gem "base64"
+gem "bigdecimal"
